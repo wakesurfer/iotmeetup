@@ -32,6 +32,7 @@ To sign in to Oracle IoT Cloud Service:
   
   b. Under **Name**, enter **temperature**, and as **Type**, choose **Float**
   
-6. Click **Save** in the upper-right corner. If you've done all steps above, the newly created device model is added to the Device Model table. Please **double check** it's there and that all data entered is correct. 
+6. Do step 5, but use **humidity** instead of temperature. 
+7. Click **Save** in the upper-right corner. If you've done all steps above, the newly created device model is added to the Device Model table. Please **double check** it's there and that all data entered is correct. 
 
 ### All done? Time to [create your IoT application](createapplication.md)! ###
