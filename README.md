@@ -1,7 +1,7 @@
 
 ----
 
-![Add](images/meetupbanner.jpg)
+![Add](images/meetupbanner.png)
 
 # IoT - Lets Connect Things to the Cloud #
 
