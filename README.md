@@ -2,7 +2,7 @@
 ----
 
 ![Banner](images/meetupbanner.png)
-<img align="center" src="images/meetupbanner.png" width = "956px">
+<img align="left" src="images/meetupbanner.png" width = "300px">
 
 # IoT - Lets Connect Things to the Cloud #
 
