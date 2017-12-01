@@ -1,25 +1,28 @@
-## Registering a Single Device ##
+## Registering your RaspberryPi as a safe Device ##
 
-To communicate with Oracle Internet of Things Cloud Service, every device that is connected to Oracle Internet of Things Cloud Service must be registered and then activated. 
+To communicate with IoT CS in a secure manner, every device that is connected to the Cloud Service must first be registered and then activated. 
 
-Full official tutorial can be found [here](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/registering-your-devices.html "Registering Your Devices").
+(Full official tutorial can be found [here](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/registering-your-devices.html "Registering Your Devices"). )
 
-To register your RaspberryPi:
+## To register your RaspberryPi:
 
-1. Open the Management Console. Click the **Menu** (Menu icon) , click **Devices**.
+1. Open the Management Console. Click the **Menu** (![Menu](images/iot-menu-icon.png)) , click **Devices**.
 2. Click **Registration**.
 3. Click **Register Single Device**.
 4. Complete the optional and mandatory fields.
-  * **Note:** If you leave the Activation Secret field blank, a value is auto-generated and displayed when the device registration is confirmed. You can enter your own Activation Secret value. Any additional information, such as Name, Description, and Metadata are optional, but can be useful as search criteria when managing your registered devices.
+  * **Note:** If you leave the Activation Secret field blank, a value is auto-generated and displayed when the device registration is confirmed. You can enter your own Activation Secret value. Any additional information, such as Name, Description, and Metadata are optional, but can be useful as search criteria when managing your registered devices.  
+  For the sake of this hackathon, enter som unique information about your team in some of these fields.
 5. Click **Register**.
-6. Enter a password in the **File Protection Password** field to encrypt the provisioning file that contains the configuration and credentials to activate your device.
-Enter the password again in the **Confirm Password** field.
+6. Specify a password in the File Protection Password and in Confirm Password fields to encrypt the provisioning file that contains the configuration and credentials to activate your device.  
+  *Enter the password again in the **Confirm Password** field.  
+   **_Note that password!_** You will need it and the downloaded file to connect your RaspberryPi to the IoT CS.  
+   ![Registration](images/registration_confirmation.png)
 7. Click **Download Provisioning File** to download the provisioning file to your computer.
-The provisioning file is required to run your client.
+The provisioning file is the .
 8. Click **Finish**.
 9. Click Management .
-  * The registered device is listed in the Management pane with a State value of Registered and Type value of Unknown.
+  * Double check that your RaspberryPi is listed in the Management pane with a State value of Registered and Type value of Unknown.
 
-You have now successfully registered your RaspberryPi as a device in the IoT Cloud Service! Time for the next step!
+You have now successfully registered your RaspberryPi as a device in the IoT Cloud Service!
 
-### [Configure your device to connect to the IoT Cloud Service server](configure.md) ###
+### Time for the next step: [Configure your RaspberryPi to connect to the IoT server](configure.md)! ###
