@@ -1,4 +1,4 @@
-## Registering your RaspberryPi as a safe Device ##
+## Registering your RaspberryPi as a trusted Device ##
 
 To communicate with IoT CS in a secure manner, every device that is connected to the Cloud Service must first be registered and then activated. 
 
