@@ -18,8 +18,8 @@ Full official tutorial on how to create a new application can be found [here](ht
 5. Click the IoT application’s name (your team's name) to continue defining the application’s elements.  
    The application’s dashboard is displayed. It is empty until you complete creating your application.
 6. Click **Device Model** to associate the IoT application with your Device model from the previous step.  
-  1. Click **Choose Device Model** and then pick the model you created in the previous step by checking the box in the Add column.
-  2. Click **Done**
+  * Click **Choose Device Model** and then pick the model you created in the previous step by checking the box in the Add column.  
+  * Click **Done**
 7. (Once device is configured) Click **Device Selection** to filter the devices that are allowed to send/recieve messages as part of the application.
 
 
