@@ -4,7 +4,7 @@ To communicate with IoT CS in a secure manner, every device that is connected to
 
 (Full official tutorial can be found [here](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/registering-your-devices.html "Registering Your Devices"). )
 
-## To register your RaspberryPi:
+### To register your RaspberryPi:
 
 1. Open the Management Console. Click the **Menu** (![Menu](images/iot-menu-icon.png)) , click **Devices**.
 2. Click **Registration**.
