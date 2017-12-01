@@ -2,13 +2,13 @@
 
 A device model gives the IoT Cloud Service access to the resources and capabilities provided by a specific device type. Your RaspberryPi will need to identify and be registered as at least one device model to be able to send data to the IoT Cloud Service.
 
-To learn more, see [About Device Models in Oracle IoT Cloud Service](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/device-models-oracle-iot-cloud-service.html "About Device Models in Oracle IoT Cloud Service").
-Full official tutorial on how to add a new Device Model can be found [here](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/creating-new-device-model.html "Creating new Device Model").
+(To learn more, see [About Device Models in Oracle IoT Cloud Service](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/device-models-oracle-iot-cloud-service.html "About Device Models in Oracle IoT Cloud Service").
+Full official tutorial on how to add a new Device Model can be found [here](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/creating-new-device-model.html "Creating new Device Model"). )
 
 ### Login ###
 
 To sign in to Oracle IoT Cloud Service:
-1. Open a web browser and open the **console** using the provided address (similar to https://<your-IoT-instance-here>.oraclecloud.com/ui ).
+1. Open a web browser and open the **console** using the provided address (similar to https://your-IoT-instance-here.oraclecloud.com/ui ).
 2. When prompted, enter the provided credentials and click **Sign In**.
 
 
@@ -16,8 +16,8 @@ To sign in to Oracle IoT Cloud Service:
 
 1. Login to the IoT Cloud Service using provided credentials.
 2. Once logged in, click the **Main Menu** icon (![Menu](images/iot-menu-icon.png)), then select **Devices**, and then select **Models**.
-3. Click **Device Models** on the right pane and then the Add button (![Add](images/add-button.jpg)) in the Device Model page, as shown below.
-   (![Add](images/device-model-add.jpg))
+3. Click **Device Models** on the right pane and then the Add button ![Add](images/add-button.jpg) in the Device Model page, as shown below.
+   ![Add](images/device-model-add.jpg)
    
 4. Enter the values for the **Name**, **Description**, and **URN** text fields. 
    Name will be the alias for your RaspberryPi in the IoT service, please mark down with your **team name** and put for example your **team slogan** in the description.
@@ -25,6 +25,6 @@ To sign in to Oracle IoT Cloud Service:
    
    Please enter the following: urn:com:discotechoracle:devices:**<TeamName>**
 5. Now it's time for custom attributes! If you are using the provided sensors, they will measure **temperature** and **humidity**. 
-..a Click the Add button (![Add](images/add-button.jpg)) in the **Custom Attributes** section.
+..a Click the Add button ![Add](images/add-button.jpg) in the **Custom Attributes** section.
 ..b Under **Name**, enter **temperature**, and as **Type**, choose **Float**
 ### [Click here to create your IoT application](createapplication.md) ###
