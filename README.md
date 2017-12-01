@@ -1,7 +1,7 @@
 
 ----
 
-![Banner](images/meetupbanner.png)
+![Banner](images/device-model-add.jpg)
 <img align="left" src="images/meetupbanner.png" width = "300px">
 
 # IoT - Lets Connect Things to the Cloud #
