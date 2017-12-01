@@ -26,7 +26,7 @@ You will:
 + Credentials to an IoT CS instance (provided in the meetup)
 
 
-### [Click here to get started!](instructions/devicemodel.md) ###
+### Rady? Find a team and [Click here to get started!](instructions/devicemodel.md) ###
 
 For the official workflow and best practices : [Click here](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/workflow-implementing-cloud-service.html "Workflow for Implementing the Cloud Service")
 

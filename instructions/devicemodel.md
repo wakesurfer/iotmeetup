@@ -1,6 +1,8 @@
 ## Create a device model ##
 
-A device model gives the IoT Cloud Service access to the resources and capabilities provided by a specific device type. Your RaspberryPi will need to identify and be registered as at least one device model to be able to send data to the IoT Cloud Service.
+Before anything else, you will need to **_define a model_** for your RaspberryPi in the IoT Cloud Service (IoT CS). 
+
+A device model gives the IoT CS access to the resources and capabilities provided by a specific device type. Your RaspberryPi will need to identify and be registered as at least one device model to be able to send data to the IoT CS.
 
 (To learn more, see [About Device Models in Oracle IoT Cloud Service](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/device-models-oracle-iot-cloud-service.html "About Device Models in Oracle IoT Cloud Service").
 Full official tutorial on how to add a new Device Model can be found [here](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/creating-new-device-model.html "Creating new Device Model"). )
@@ -20,11 +22,13 @@ To sign in to Oracle IoT Cloud Service:
    ![Add](images/device-model-add.jpg)
    
 4. Enter the values for the **Name**, **Description**, and **URN** text fields. 
-   Name will be the alias for your RaspberryPi in the IoT service, please mark down with your **team name** and put for example your **team slogan** in the description.
+   Name will be the alias for your RaspberryPi in the IoT CS, please mark down with your **team name** and put for example your **team slogan** in the description.
+   
    The URN is special. When your RaspberryPi sends messages, it will use this as a kind of URL. By posting to the URN, the IoT service will know what type of metadata the message will contain. 
    
-   Please enter the following: urn:com:discotechoracle:devices:**<TeamName>**
+   Please enter the following: _urn:com:discotechoracle:devices:**TeamName**_
 5. Now it's time for custom attributes! If you are using the provided sensors, they will measure **temperature** and **humidity**. 
-..a Click the Add button ![Add](images/add-button.jpg) in the **Custom Attributes** section.
-..b Under **Name**, enter **temperature**, and as **Type**, choose **Float**
+  a. Click the Add button ![Add](images/add-button.jpg) in the **Custom Attributes** section.
+  b. Under **Name**, enter **temperature**, and as **Type**, choose **Float**
+
 ### [Click here to create your IoT application](createapplication.md) ###
