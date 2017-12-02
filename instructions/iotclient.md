@@ -16,7 +16,8 @@ Move to the bin directory of the project
 3. Now we will start to add the required API's to the client.
 First lets look at what we got from the template.
 
-`#include <stdio.h>
+```
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -97,7 +98,8 @@ int main(int argc, char** argv) {
 */
 
     return EXIT_SUCCESS;
-}`
+}
+```
 
 
 
