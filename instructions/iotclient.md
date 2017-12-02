@@ -109,7 +109,7 @@ const int sensor_type = 22;
 // The sensor is on GPIO pin=4
 const int gpio_pin = 4;
 ```
-6. Next we have a value that we need to set according to our team name. It is the string "urn:com:oracle:demo:esensor" that needs to be changed into something like "urn:com:discotechoracle:devices:**TeamName"**. This is the way that the IoT server will recognize device that the messages are actually coming from.
+6. Next we have a value that we need to set according to our team name. It is the string "urn:com:oracle:demo:esensor" that needs to be changed into something like "urn:com:discotechoracle:devices:**TeamName"**. This is the way that the IoT server will recognize which device that the messages are actually coming from.
 ```
 int main(int argc, char** argv) {
     /* This is the URN of your device model. */
