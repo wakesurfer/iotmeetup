@@ -4,6 +4,8 @@ Most of the configuration of the Raspberry is **already done** but we will revis
 
 These are the basic steps needed:
 
+0. Setup WIFI connections. Instructions [here](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md).
+
 1. Creating a Bootable Image for the Raspberry. We are using the Raspbian Jessie Image.
 
 2. Setting up the Raspberry to Allow SSH Connections
