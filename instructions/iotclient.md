@@ -99,17 +99,25 @@ int main(int argc, char** argv) {
     return EXIT_SUCCESS;
 }
 ```
-The first important variable declaration is which type of sensor we are using. The DHT11 and DHT22 need different drivers so it is important to tell which type we are using.
+4. The first important variable declaration is which type of sensor we are using. The DHT11 and DHT22 need different drivers so it is important to tell which type we are using.
 ```
 // Set sensor type DHT11=11, DHT22=22
 const int sensor_type = 22;
 ```
-Next we need to tell on which pin we have connected the sensor on the GPIO connector.
+5. Next we need to tell on which pin we have connected the sensor on the GPIO connector.
 ```
 // The sensor is on GPIO pin=4
 const int gpio_pin = 4;
 ```
-
+6. Next we have a value that we need to set according to our team name. It is the string "urn:com:oracle:demo:esensor" that needs to be changed into something like "urn:com:discotechoracle:devices:**TeamName"**. This is the way that the IoT server will recognize device that the messages are actually coming from.
+```
+int main(int argc, char** argv) {
+    /* This is the URN of your device model. */
+    const char* device_urns[] = {
+        "urn:com:oracle:demo:esensor",
+        NULL
+    };
+```
 
 
 Now I'm sure you would like to add some features that make this code more useful in production.
