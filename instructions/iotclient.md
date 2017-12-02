@@ -13,8 +13,7 @@ Move to the bin directory of the project
 
 2. Open the file **iotclient.c** either on the Raspberry or if you choose to pull down the repo to your laptop.
 
-3. Now we will start to add the required API's to the client.
-First lets look at what we got from the template.
+3. Now we will start to add the required API's to the client. First lets look at what we got from the template.
 
 ```
 #include <stdio.h>
@@ -99,6 +98,11 @@ int main(int argc, char** argv) {
 
     return EXIT_SUCCESS;
 }
+```
+The first important variable declaration is which type of sensor we are using. The DHT11 and 22 need different drivers.
+```
+// Set sensor type DHT11=11, DHT22=22
+const int sensor_type = 22;
 ```
 
 
