@@ -99,7 +99,7 @@ int main(int argc, char** argv) {
     return EXIT_SUCCESS;
 }
 ```
-The first important variable declaration is which type of sensor we are using. The DHT11 and 22 need different drivers.
+The first important variable declaration is which type of sensor we are using. The DHT11 and DHT22 need different drivers so it is important to tell which type we are using.
 ```
 // Set sensor type DHT11=11, DHT22=22
 const int sensor_type = 22;
@@ -107,6 +107,7 @@ const int sensor_type = 22;
 
 
 
-Now I'm sure you would like to add some features that make this usable in production.
+
+Now I'm sure you would like to add some features that make this code more useful in production.
 
 ### [The Final Touch](finaltouch.md) ###
