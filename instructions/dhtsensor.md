@@ -1,4 +1,4 @@
-## Sharpen your senses and Test your sensor!##
+## Sharpen your senses and Test your sensor! ##
 
 For this client we are using an Adafruit sensor DHT22. This is a popular device that is reasonably accurate for a low price.
 
@@ -9,11 +9,9 @@ Due to availability we got DHT22's but for an easier ride you might want to go w
 
 Now we need to test that our sensor is actually working. To make this really simple we have provided a test client.
 
-1. In the bin directory there is some code **sensor_test.c**. Compile this code with the provided shell script.
-   `sh build_sensor_test.sh`
+1. In the bin directory there is some code **sensor_test.c**. Compile this code with the provided shell script `sh build_sensor_test.sh`
 
-2. Then run the test with
-   `./sensor_test.out`
+2. Then run the test with `./sensor_test.out`
 
 If everything works you will get the current temperature and humidity.
 
