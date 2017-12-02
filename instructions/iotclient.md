@@ -104,7 +104,11 @@ The first important variable declaration is which type of sensor we are using. T
 // Set sensor type DHT11=11, DHT22=22
 const int sensor_type = 22;
 ```
-
+Next we need to tell on which pin we have connected the sensor on the GPIO connector.
+```
+// The sensor is on GPIO pin=4
+const int gpio_pin = 4;
+```
 
 
 
