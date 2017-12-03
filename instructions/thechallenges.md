@@ -15,4 +15,4 @@ Now on to some interesting challenges. Here we will not guide like in the tutori
 
 Hint hint, nudge nudge: for some of the challenges you can find excellent help by searching Github for examples.
 
-### [Back to the start](raspberrysetup.md) ###
+### [Back to the start](../README.md) ###
