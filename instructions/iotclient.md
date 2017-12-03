@@ -4,13 +4,13 @@
 As most TV Chefs we don't start from scratch, we have a template to start from.
 
 Move to the bin directory of the project
-
-`cd iotcs/posix/bin`
-
+```
+cd iotcs/posix/bin
+```
  And copy the template to the file we will use as per below.
-
-`cp iotclient_template.c iotclient.c`
-
+```
+cp iotclient_template.c iotclient.c
+```
 2. Open the file **iotclient.c** either on the Raspberry or if you choose to pull down the repo to your laptop.
 
 3. Now we will start to add the required API's to the client. First lets look at what we got from the template.
@@ -100,12 +100,16 @@ int main(int argc, char** argv) {
 }
 ```
 
-You try and compile the code already to see that everything is in place. We have prepared a shell script you can use. To build run the script as below
+You can try and compile the code already to see that everything is in place. We have prepared a shell script you can use. To build run the script as below
 ```
 sh build_iotclient.sh
 ```
+Now run the client.
+```
+sh run_iotclient.sh
+```
 
-4. The first important variable declaration is which type of sensor we are using. The DHT11 and DHT22 need different drivers so it is important to tell which type we are using.
+4. The first important const variable declaration is the type of sensor. The DHT11 and DHT22 need different drivers so it is important to tell which type we are using.
 ```
 // Set sensor type DHT11=11, DHT22=22
 const int sensor_type = 22;
@@ -115,7 +119,7 @@ const int sensor_type = 22;
 // The sensor is on GPIO pin=4
 const int gpio_pin = 4;
 ```
-6. Next we have a value that we need to set according to our team name. It is the string "urn:com:oracle:demo:esensor" that needs to be changed into something like "urn:com:discotechoracle:devices:**TeamName"**. This is the way that the IoT server will recognize which device that the messages are actually coming from.
+6. Next we have a value that we need to set according to our team name. It is the string "urn:com:oracle:demo:esensor" that needs to be changed into "urn:com:discotechoracle:devices:**TeamName"**. This is the way that the IoT server will recognize which device that the messages are actually coming from.
 ```
 int main(int argc, char** argv) {
     /* This is the URN of your device model. */
@@ -125,7 +129,39 @@ int main(int argc, char** argv) {
     };
 ```
 
+7. First we need to Initialize the IoT library. Add this code to iotclient.c where indicated by the comment "Add your code here!"
 
-Now I'm sure you would like to add some features that make this code more useful in production.
+```
+/*
+ * Initialize the library before any other calls.
+ * Initiate all subsystems like ssl, TAM, request dispatcher,
+ * async message dispatcher, etc which needed for correct library work.
+ */
 
-### [The Final Touch](finaltouch.md) ###
+if (iotcs_init(ts_path, ts_password) != IOTCS_RESULT_OK) {
+    error("Initialization failed");
+}
+```
+
+8. Next we need to activate the device if it is not already activated.
+```
+/*
+ * Activate the device, if it's not already activated.
+ * Always check if the device is activated before calling activate.
+ * The device model URN is passed into the activate call to tell
+ * the server the device model(s) that are supported by this
+ * device
+ */
+
+if (!iotcs_is_activated()) {
+    if (iotcs_activate(device_urns) != IOTCS_RESULT_OK) {
+        error("Sending activation request failed");
+    }
+}
+```
+
+
+
+Now I'm sure you would like to add some features that would make this code more useful in production scenario.
+
+### [The Final Touch](iotclientfinaltouch.md) ###
