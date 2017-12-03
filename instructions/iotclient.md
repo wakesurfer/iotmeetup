@@ -1,4 +1,4 @@
-## Create the IoT Client app ##
+## Building the IoT client ##
 
 1. Now we will start to code the actual IoT Client.
 As most TV Chefs we don't start from scratch, we have a template to start from.
