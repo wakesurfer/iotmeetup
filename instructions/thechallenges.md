@@ -1,6 +1,6 @@
 ## The Challenges ##
 
-Now on to some interesting challenges. Here we will not guide like in the tutorials. If you complete 3 of these then you will get a nice prize and a permanent place in the IoT Gurus Hall of Fame!
+Now on to some interesting challenges. Here we will not guide like in the tutorials. If you complete 3 of these then you will get a nice prize and a permanent place in the IoT Gurus Hall of Fame on our Meetup.com site!
 
 1. Build a Python client that does something similar to the C client in the tutorial or something totally different, it is up to you to dazzle us! Here we need to explore the REST APIs of the IoT Server since there are no client libraries for Python. You might involve the DHT22 sensor or just send some sample data to the server.
 
