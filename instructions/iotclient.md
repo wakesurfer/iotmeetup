@@ -119,7 +119,7 @@ const int sensor_type = 22;
 // The sensor is on GPIO pin=4
 const int gpio_pin = 4;
 ```
-6. Next we have a value that we need to set according to our team name. It is the string "urn:com:oracle:demo:esensor" that needs to be changed into "urn:com:discotechoracle:devices:**TeamName"**. This is the way that the IoT server will recognize which device that the messages are actually coming from.
+6. Next we have a value that we need to set according to our team name. It is the string "urn:com:oracle:demo:esensor" that needs to be changed into "urn:com:discotechoracle:devices:**TeamName"**. This is the way that the IoT server will recognize which device models that our device supports.
 ```
 int main(int argc, char** argv) {
     /* This is the URN of your device model. */
@@ -143,7 +143,7 @@ if (iotcs_init(ts_path, ts_password) != IOTCS_RESULT_OK) {
 }
 ```
 
-8. Next we need to activate the device if it is not already activated.
+8. Next we need to activate the device if it is not already activated. Add this code to iotclient.c after the previously entered section.
 ```
 /*
  * Activate the device, if it's not already activated.
@@ -159,7 +159,30 @@ if (!iotcs_is_activated()) {
     }
 }
 ```
+9. Get the handles needed to be able to call API's. Add this code to iotclient.c after the previously entered section.
+```
+/* get device model handle */
+if (iotcs_get_device_model_handle(device_urns[0], &device_model_handle) != IOTCS_RESULT_OK) {
+    fprintf(stderr,"iotcs_get_device_model_handle method failed\n");
+    return IOTCS_RESULT_FAIL;
+}
 
+/* get device handle */
+if (iotcs_get_virtual_device_handle(iotcs_get_endpoint_id(), device_model_handle, &device_handle) != IOTCS_RESULT_OK) {
+    fprintf(stderr,"iotcs_get_device_handle method failed\n");
+    return IOTCS_RESULT_FAIL;
+}
+```
+10. Now lets read some values from the DHT sensor! This API **pi_2_dht_read()** comes from the DHT client library. We have also added some logging to be able to see what is going on at the client side. Add this code to iotclient.c after the previously entered section.
+```
+// Read values from the sensor.
+fprintf(stderr,"iotcs: Reading from the DHT%u sensor!\n", sensor_type);
+result = pi_2_dht_read(sensor_type, gpio_pin, &humidity, &temperature);
+if (result != DHT_SUCCESS) {
+  fprintf(stderr,"iotcs: Warning, Bad data from the DHT%u sensor\n", sensor_type);
+}
+fprintf(stderr,"iotcs: temperature = %2.2f, humidity= %2.2f\n", temperature, humidity);
+```
 
 
 Now I'm sure you would like to add some features that would make this code more useful in production scenario.
