@@ -2,7 +2,16 @@
 
 Now lets add some nice to haves to the client.
 
-1. Obviously a "thing on the internet" that only sends one set of information and then needs to be retarted is not very useful. So lets introduce a loop that keeps the data flowing from the client. Insert the following after the call to *iotcs_get_virtual_device_handle()*.
+1. Obviously a "thing on the internet" that only sends one set of information and then needs to be restarted is not very useful. So lets introduce a loop that keeps the data flowing from the client.
+Find the following block of code in iotclient.c.
+```
+/* get device handle */
+if (iotcs_get_virtual_device_handle(iotcs_get_endpoint_id(), device_model_handle, &device_handle) != IOTCS_RESULT_OK) {
+  fprintf(stderr,"iotcs_get_device_handle method failed\n");
+  return IOTCS_RESULT_FAIL;
+}
+```
+Then insert the following
 ```
   /* Main loop - Read the sensor and send attributes to IOT */
 	while(1)
@@ -17,7 +26,5 @@ Now insert the following after the block of code above to close the while loop.
 ```
 }
 ```
-
-
 
 ### [The Final Touch](iotclientfinaltouch.md) ###
