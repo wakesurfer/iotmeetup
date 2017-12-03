@@ -40,7 +40,6 @@ ps -ef | grep iotclient
 ```
 You will get something that looks like
 ```
-pi@Viggen:~/iotcs/posix/bin $ ps -ef | grep iotclient
 pi       16626  4215  0 17:16 pts/0    00:00:00 sh run_iotclient.sh log
 pi       16627 16626  4 17:16 pts/0    00:00:00 ./iotclient.out ./AAAAAAQB7RGB-A5.conf Password1 test
 pi       16631  4215  0 17:16 pts/0    00:00:00 grep --color=auto iotclient
@@ -49,9 +48,17 @@ If you want to stop your client you need to kill the process like this.
 ```
 kill -9 <pid>
 ```
-The <pid> in the above example is 16627. So it would be.
+The pid in the above example is 16627. So it would be.
 ```
 kill -9 16627
+```
+You can also check the log file to see what client is doing.
+```
+grep temperature log
+```
+or to "follow" the clients log do
+```
+tail -f log
 ```
 
 3. Finally, why not start the client when the Raspberry boots? Then you can just plugin the power and your "appliance" will start its measurements and report to the IoT Cloud Service.
@@ -61,7 +68,7 @@ sudo nano /etc/rc.local
 ```
 and add the following code.
 ```
-sh /home/pi/iotcs/posix/bin/run.sh > /home/pi/iotcs/posix/bin/log/$(date +%Y\:%m\:%d-%H\:%M\:%S)-run.log 2>&1 &
+sh /home/pi/iotcs/posix/bin/run_iotclient.sh > /home/pi/iotcs/posix/bin/$(date +%Y\:%m\:%d-%H\:%M\:%S)-run.log 2>&1 &
 ```
 Ok, now reboot the RPi to test. Remember you can check on the process with *ps -ef ...* as you did earlier.
 You can also monitor the messages from your client in the IoT Servers Dashboards.
