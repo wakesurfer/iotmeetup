@@ -13,9 +13,8 @@ if (iotcs_get_virtual_device_handle(iotcs_get_endpoint_id(), device_model_handle
 ```
 Then insert the following
 ```
-  /* Main loop - Read the sensor and send the attributes to IOT */
-	while(1)
-	{
+/* Main loop - Read the sensor and send the attributes to IOT */
+while(1) {
 ```
 We then need to close the while loop after the attributes are updated and we can do the next iteration. Locate the following block of code.
 ```
