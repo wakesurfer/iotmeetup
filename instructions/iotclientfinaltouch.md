@@ -21,10 +21,10 @@ We then need to close the while loop after the attributes are updated and we can
 // We are done. IOT can sync the virtual device
 iotcs_virtual_device_finish_update(device_handle);
 ```
-Now insert the following after the block of code above to close the while loop.
+Now insert the following after the block of code above to close the while loop. We also call a sleep function to avoid overloading the DHT22 sensor.
 ```
-  // Sleep 10 secs
-  sleep(10);
+  // Sleep 20 secs
+  sleep(20);
 }
 ```
 Time to test your improved client. You know the drill by now. To end the test simply press ctrl-C.
