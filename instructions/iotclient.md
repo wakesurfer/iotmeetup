@@ -10,6 +10,7 @@ cd iotcs/posix/bin
  And copy the template to the file we will use as per below.
 ```
 cp iotclient_template.c iotclient.c
+*An important note here. If you skipped ahead an already ran the iotclient.c then you must continue work with the exact same file. You can open and edit it, replacing the contents in it etc. But do not replace it via a copy operation.*
 ```
 2. Open the file **iotclient.c** either on the Raspberry or if you choose to pull down the repo to your laptop.
 
