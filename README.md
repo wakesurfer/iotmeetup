@@ -5,22 +5,23 @@
 
 # IoT - Lets Connect Things to the Cloud #
 
-If you are attending the meetup [Lets Meetup and Connect Things to the Cloud](https://www.meetup.com/DiscoTech-By-Oracle/events/240960241/ "Lets Meetup and Connect Things to the Cloud"), you're in the right place!
+If you are attending the meetup [Lets Meetup and Connect Things to the Cloud](https://www.meetup.com/DiscoTech-By-Oracle/events/240960241/ "Lets Meetup and Connect Things to the Cloud"), you're at the right place!
 
 ## Introduction	##
 
 This tutorial will walk you through the basic workflow on connecting a RaspberryPi with a temperature & humidity sensor to the Oracle IoT Cloud Service.
 
 You will:
-Track 1
+
+**Track 1**
 1. Review the configuration of the RaspberryPi
 2. Test the DHT22 sensor with a provided app.
 3. Build the IoT client bit by bit from the provided code snippets (you don't need to be a programmer to complete this)
-4. Test your client
+4. Test your client. When you are ready to test against the IoT Server **Track 2** need to be finished
 5. Add some useful features to complete the client
 6. Optionally complete one or more challenges
 
-Track 2
+**Track 2**
 1. Create a device model
 2. Create an IoT application
 3. Register your RaspberryPi as a trusted device
