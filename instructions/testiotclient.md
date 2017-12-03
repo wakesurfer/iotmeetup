@@ -1,7 +1,8 @@
-## Create the IoT Client app ##
+## Test the client ##
 
-1. To test the app we need to again build it with build_iotclient.sh.
+1. To test the app we need to again build it with build_iotclient.sh. But remember to first update the code on the client by doing a git pull.
 ```
+git pull
 sh build_iotclient.sh
 ```
 Now run the client.
