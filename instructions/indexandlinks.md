@@ -1,7 +1,7 @@
 ## Index and Links ##
 
-# Index #
+### Index ###
 
-# Links #
+### Links ###
 
 [IoT Cloud Service Docs](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/index.html)
