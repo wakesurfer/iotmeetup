@@ -1,4 +1,4 @@
-## Test the client ##
+## The Final Touch ##
 
 1. To test the app we need to again build it with **build_iotclient.sh**. But remember to first update the code on the client by doing a git pull.
 ```
