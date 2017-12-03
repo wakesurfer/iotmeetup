@@ -13,18 +13,21 @@ if (iotcs_get_virtual_device_handle(iotcs_get_endpoint_id(), device_model_handle
 ```
 Then insert the following
 ```
-  /* Main loop - Read the sensor and send attributes to IOT */
+  /* Main loop - Read the sensor and send the attributes to IOT */
 	while(1)
 	{
 ```
-We need to close the while loop after the attributes are updated and we can do the next iteration. Locate the following block of code.
+We then need to close the while loop after the attributes are updated and we can do the next iteration. Locate the following block of code.
 ```
 // We are done. IOT can sync the virtual device
 iotcs_virtual_device_finish_update(device_handle);
 ```
 Now insert the following after the block of code above to close the while loop.
 ```
+  // Sleep 10 secs
+  sleep(10);
 }
 ```
+Time to test your improved client. You know the drill by now. To end the test simply press ctrl-C.
 
 ### [The Final Touch](iotclientfinaltouch.md) ###
