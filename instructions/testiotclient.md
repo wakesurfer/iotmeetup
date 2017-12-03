@@ -12,6 +12,7 @@ sh run_iotclient.sh
 Hopefully you will see some measurements from the sensor which will be sent to the IOT Server. The URL of the server is located in the conf file that you provide as an input parameter (in the shell script) to the iotclient app.
 
 2. To see what happens on the other side lets login to the IoT Server @ https://oc-129-150-123-79.compute.oraclecloud.com/ui/
+The credentials will be provided at the event.
 
 3. On the dashboard click into the IoT Application that you previously created for your team.
 
