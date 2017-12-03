@@ -139,6 +139,8 @@ int main(int argc, char** argv) {
  * async message dispatcher, etc which needed for correct library work.
  */
 
+sleep (20); // Allow network services to startup
+
 if (iotcs_init(ts_path, ts_password) != IOTCS_RESULT_OK) {
     error("Initialization failed");
 }
