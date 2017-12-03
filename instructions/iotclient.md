@@ -159,7 +159,7 @@ if (!iotcs_is_activated()) {
     }
 }
 ```
-9. Get the handles needed to be able to call API's. Add this code to iotclient.c after the previously entered section.
+9. Get the handles needed to be able to call the IoT library API's. Add this code to iotclient.c after the previously entered section.
 ```
 /* get device model handle */
 if (iotcs_get_device_model_handle(device_urns[0], &device_model_handle) != IOTCS_RESULT_OK) {
@@ -182,6 +182,45 @@ if (result != DHT_SUCCESS) {
   fprintf(stderr,"iotcs: Warning, Bad data from the DHT%u sensor\n", sensor_type);
 }
 fprintf(stderr,"iotcs: temperature = %2.2f, humidity= %2.2f\n", temperature, humidity);
+```
+11. Here is an important API you need to add. It tells IoT that you want to "open an update session" on the client. This means that after this you can add multiple attributes to send and IoT will wait for you to tell it when it is ok to do so. In a couple of rows we will do just that. Add this code to iotclient.c after the previously entered section.
+```
+// Start setting attribute for IOT
+iotcs_virtual_device_start_update(device_handle);
+```
+12. Now lets set some attributes that we want to send to the IoT server. This is of course the temperature and humidity values we just read from the sensor. Please note that we are now changing attributes on the **"digital twin"**. The IoT infrastructure will keep the server and the client in sync. There is no need to actually "send" the data. Add this code to iotclient.c after the previously entered section.
+```
+// Set attribute
+rv = iotcs_virtual_device_set_float(device_handle, "temperature", temperature);
+if (rv != IOTCS_RESULT_OK) {
+  fprintf(stderr,"iotcs_virtual_device_set_float 1 failed\n");
+  return IOTCS_RESULT_FAIL;
+}
+
+// Set attribute
+rv = iotcs_virtual_device_set_float(device_handle, "humidity", humidity);
+if (rv != IOTCS_RESULT_OK) {
+  fprintf(stderr,"iotcs_virtual_device_set_float 2 failed\n");
+  return IOTCS_RESULT_FAIL;
+}
+```
+13. Now that the attributes are all set we can close the "update session" and let IoT sync the data to the server.  Add this code to iotclient.c after the previously entered section.
+```
+// We are done. IOT can sync the virtual device
+iotcs_virtual_device_finish_update(device_handle);
+```
+14. And finally release the device handles and call the Finalize API. This will close all communication etc.  Add this code to iotclient.c after the previously entered section.
+```
+/* free device handle */
+iotcs_free_virtual_device_handle(device_handle);
+/* free device model handle */
+iotcs_free_device_model_handle(device_model_handle);
+
+/*
+ * Calling finalization of the library ensures communications channels are closed,
+ * previously allocated temporary resources are released.
+ */
+iotcs_finalize();
 ```
 
 
