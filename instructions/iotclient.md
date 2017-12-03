@@ -223,7 +223,6 @@ iotcs_free_device_model_handle(device_model_handle);
 iotcs_finalize();
 ```
 
+Now we will test that the client actually works!
 
-Now I'm sure you would like to add some features that would make this code more useful in production scenario.
-
-### [The Final Touch](iotclientfinaltouch.md) ###
+### [Test the client](testiotclient.md) ###
