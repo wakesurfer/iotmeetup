@@ -1,7 +1,7 @@
-## Create the IoT Client code ##
+## Create the IoT Client app ##
 
 1. Now we will start to code the actual IoT Client.
-As most TV Chefs we don't start from scratch, we have a template to start with.
+As most TV Chefs we don't start from scratch, we have a template to start from.
 
 Move to the bin directory of the project
 
@@ -99,6 +99,12 @@ int main(int argc, char** argv) {
     return EXIT_SUCCESS;
 }
 ```
+
+You try and compile the code already to see that everything is in place. We have prepared a shell script you can use. To build run the script as below
+```
+sh build_iotclient.sh
+```
+
 4. The first important variable declaration is which type of sensor we are using. The DHT11 and DHT22 need different drivers so it is important to tell which type we are using.
 ```
 // Set sensor type DHT11=11, DHT22=22
