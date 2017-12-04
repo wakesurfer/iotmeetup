@@ -13,6 +13,8 @@ Now on to some interesting challenges. Here we will not guide like in the tutori
 
 5. Of course you brought your own Raspberry to the event! Now it is time to replicate what we have done but without the added help of templates and crutches!
 
+6. More of a front-end person? Use the [IoT REST API](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotrq/toc.htm "REST API for Oracle Internet of Things Cloud Service") and why not create your own monitoring-website for your team?
+
 Hint hint, nudge nudge: for some of the challenges you can find excellent help by searching Github for examples.
 
 ### [Back to the start](../README.md) ###
