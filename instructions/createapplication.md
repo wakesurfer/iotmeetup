@@ -1,7 +1,7 @@
 ## Creating a New Application ##
 
 We now have a device model for our RaspberryPi, but we still need an application to **_subscribe to the information_** our device will be sending. 
-An IoT Application is a client which subscribes to certain incoming messages in streams, transforms them and in most cases sends it to other enterprise application for further action (for example for Big Data explorations).
+An IoT Application subscribes to certain incoming messages in streams, transforms them and in most cases sends it to other enterprise application for further action (for example for Big Data explorations).
 
 When you create a new IoT application, you need to associate it with at least one device model. In this case, your newly created RaspberryPi-model!
 
