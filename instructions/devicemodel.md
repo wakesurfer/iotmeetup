@@ -26,7 +26,7 @@ To sign in to Oracle IoT Cloud Service:
    
    The URN is special. When your RaspberryPi sends messages, it will use this as a kind of URL. By posting to the URN, the IoT service will know what type of metadata the message will contain. 
    
-   Please enter the following: `_urn:com:discotechoracle:devices:**TeamName**_`
+   Please enter the following: _urn:com:discotechoracle:devices:**TeamName**_
 5. Now it's time for _custom attributes_! If you are using the provided sensors, they will measure **temperature** and **humidity**.
   * Click the Add button ![Add](images/add-button.jpg) in the **Custom Attributes** section.
   * Under **Name**, enter **temperature**, and as **Type**, choose **Number**
