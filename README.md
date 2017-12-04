@@ -20,7 +20,7 @@ You will:
 4. Download the provided code to your RaspberryPi using Git
 
 
-**[Part 2](configure.md): Configure and test the Raspberry**
+**[Part 2](instructions/configure.md): Configure and test the Raspberry**
 1. Configure your RaspberryPi to connect to the IoT Cloud Service
 2. Test the sensor with a provided app.
 3. Build the IoT client bit by bit from the provided code snippets (you don't need to be a programmer to complete this)
