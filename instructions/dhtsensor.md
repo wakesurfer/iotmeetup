@@ -13,7 +13,7 @@ Now we need to test that our sensor is actually working. To make this really sim
 
 `sh build_sensor_test.sh`
 
-2. Then run the test with
+2. Then **run the test** with
 
 `./sensor_test.out`
 

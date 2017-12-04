@@ -106,9 +106,9 @@ You can try and compile the code already to see that everything is in place. We 
 sh build_iotclient.sh
 ```
 
-4. If you haven't already, you now want to copy your downloaded **provisioning file** (xyz.conf) to the Raspberry, to the bin directory. Either add it to your repository, or use FileZilla/sftp/similar. 
+4. If you haven't already, you now want to **copy** your downloaded **provisioning file** (xyz.conf) to the Raspberry, to the bin directory. Either add it to your repository, or use FileZilla/sftp/similar. 
 
-Update the run_iotclient.sh to use the name of your provisioning file and password.
+**Update** the **_run_iotclient.sh_** to use the name of your provisioning file and password.
 
 5. Now run the client.
 ```
@@ -120,12 +120,12 @@ sh run_iotclient.sh
 // Set sensor type DHT11=11, DHT22=22
 const int sensor_type = 22;
 ```
-5. Next we need to tell on which pin we have connected the sensor on the GPIO connector.
+5. Next we need to **tell on which pin** we have connected the sensor on the GPIO connector.
 ```
 // The sensor is on GPIO pin=4
 const int gpio_pin = 4;
 ```
-6. Next we have a value that we need to set according to our team name. It is the string "urn:com:oracle:demo:esensor" that needs to be changed into "urn:com:discotechoracle:devices:**TeamName"**. This is the way that the IoT server will recognize which device models that our device supports.
+6. Next we have a value that we need to set according to our team name. Remember your **URN** from when you first created the device model in the IoT Cloud Service? It is the string "urn:com:oracle:demo:esensor" that needs to be changed into "urn:com:discotechoracle:devices:**TeamName"**. This is the way that the IoT server will recognize which device models that our device supports.
 ```
 int main(int argc, char** argv) {
     /* This is the URN of your device model. */
