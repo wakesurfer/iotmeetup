@@ -1,13 +1,14 @@
 ## Creating a New Application ##
 
 We now have a device model for our RaspberryPi, but we still need an application to **_subscribe to the information_** our device will be sending. 
+An IoT Application is a client which subscribes to certain incoming messages in streams, transforms them and in most cases sends it to other enterprise application for further action (for example for Big Data explorations).
 
 When you create a new IoT application, you need to associate it with at least one device model. In this case, your newly created RaspberryPi-model!
 
 (To learn more, see [Understanding an IoT Application in Oracle IoT Cloud Service](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/understanding-iot-application-oracle-iot-cloud-service.html "Understanding an IoT Application in Oracle IoT Cloud Service").
 Full official tutorial on how to create a new application can be found [here](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/creating-new-application.html "Creating a New Application"). )
 
-## To create a new application:
+## To create a new IoT application:
 
 1. From the Management Console Home page, click **Applications**, and then click **Browse Application**.
 2. Click **Create Application**.
