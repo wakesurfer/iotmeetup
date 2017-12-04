@@ -31,7 +31,7 @@ Part 1 and 2 can be partly **paralellized**, so if you're a team - save time for
 
 ----
 Done with the tutorial or just want to skip to the good stuff? Check out
-### The [challenges](thechallenges.md) ###
+### The [challenges](instructions/thechallenges.md) ###
 
 For the hackathon-part or the meetup!
 
