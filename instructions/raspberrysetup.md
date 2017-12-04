@@ -1,8 +1,8 @@
 ## Setup the Raspberry for IoT use! ##
 
-Most of the configuration of the Raspberry is **already done** but we will revisit the different parts that are important if you would like to configure your own RPi.
+We will revisit the different parts that are important if you would like to configure your own RPi, thus, **these steps have already been done on the provided Raspberries**.
 
-These are the basic steps needed:
+The basic steps needed:
 
 0. Setup WIFI connections. Instructions [here](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md).
 
@@ -17,6 +17,21 @@ These are the basic steps needed:
 4. Optional. Setting the Raspberry Pi for a GUI Login. This is useful if you have an HDMI monitor and an external USB keyboard to use.
 
 5. Optional. Setting a Static IP Address for the Raspberry. If you are on your own network and have control over address allocations.
+
+2. Open the [Oracle IoT Cloud Service Client Software Library downloads page](http://www.oracle.com/technetwork/topics/cloud/downloads/iot-client-libraries-2705514.html).
+3. Locate the Binary file for C POSIX Client Software Library and download the zip file to your RaspberryPi's home directory (/home/pi)
+5. Enter the following **command**. If you're asked if you want to continue during the installation, answer Y.  
+   `sudo apt-get install libssl-dev`  
+   ![unzip](images/dwninst_02.png)  
+6. Enter the following **command**:  
+   `export IOTCS_OS_NAME="Raspbian GNU/Linux"`  
+   The variable os_name is a name used to get the activation policy.  
+6. Enter the following **command**:  
+   `export IOTCS_OS_VERSION="8"`
+   The variable os_version is a number used to get the activation policy.  
+6. Navigate back to the home directory (/home/pi).
+7. Use the **unzip command** to extract the content of the iotcs-csl-posix-bin-release.zip file. The files are extracted into the subdirectory iotcs.  
+   ![unzip](images/dwninst_06.png)  
 
 The tool used for many of these steps is
 

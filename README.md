@@ -13,20 +13,23 @@ This tutorial will walk you through the basic workflow on connecting a Raspberry
 
 You will:
 
-**Track 1**
-1. Review the configuration of the RaspberryPi
-2. Test the DHT22 sensor with a provided app.
-3. Build the IoT client bit by bit from the provided code snippets (you don't need to be a programmer to complete this)
-4. Test your client. When you are ready to test against the IoT Server **Track 2** need to be finished
-5. Add some useful features to complete the client
-6. Optionally complete one or more challenges
-
-**Track 2**
+**Part 1: Configure the Cloud Service**
 1. Create a device model
 2. Create an IoT application
 3. Register your RaspberryPi as a trusted device
 4. Download the provided code to your RaspberryPi using Git
+
+
+**Part 2: Configure and test the Raspberry**
 5. Configure your RaspberryPi to connect to the IoT Cloud Service
+6. Test the DHT22 sensor with a provided app.
+7. Build the IoT client bit by bit from the provided code snippets (you don't need to be a programmer to complete this)
+8. Test your client. When you are ready to test against the IoT Server **Part 1** need to be finished
+9. Add some useful features to complete the client
+10. Optionally complete one or more challenges
+
+Part 1 and 2 can be partly **paralellized**, so if you're a team - save time for the challenges and split up the tasks! 
+
 
 ### Prerequisites ###
 
