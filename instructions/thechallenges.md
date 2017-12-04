@@ -1,6 +1,6 @@
 ## The Challenges ##
 
-Now on to some interesting challenges. Here we will not guide like in the tutorials. If you complete 3 of these then you will get a nice prize and a permanent place in the IoT Gurus Hall of Fame on our Meetup.com site!
+Now on to some interesting challenges. Here we will not guide like in the tutorials. If you complete 3 of these then you will get a permanent place in the IoT Gurus Hall of Fame on our Meetup.com site!
 
 1. You remember that sometimes the DHT22 sensor fails to provide measurements? Now this is a perfect place to use IoT Alerts! Enhance your iotclient.c code to send alerts to the server when the DHT22 fails to return any temperature and humidity values.
 
