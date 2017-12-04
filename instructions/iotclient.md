@@ -105,7 +105,12 @@ You can try and compile the code already to see that everything is in place. We 
 ```
 sh build_iotclient.sh
 ```
-Now run the client.
+
+4. If you haven't already, you now want to copy your downloaded **provisioning file** (xyz.conf) to the Raspberry, to the bin directory. Either add it to your repository, or use FileZilla/sftp/similar. 
+
+Update the run_iotclient.sh to use the name of your provisioning file and password.
+
+5. Now run the client.
 ```
 sh run_iotclient.sh
 ```

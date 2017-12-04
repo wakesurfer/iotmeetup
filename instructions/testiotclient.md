@@ -1,6 +1,6 @@
 ## Test the client ##
 
-1. To test the client we need to again build it with **build_iotclient.sh**. But remember to first update the code on the client by doing a git pull.
+1. To test the client we need to again build it with **build_iotclient.sh**. But remember to first update the code on the client by doing a git pull/use FileZilla.
 ```
 git pull
 sh build_iotclient.sh
