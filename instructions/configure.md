@@ -2,7 +2,7 @@
 
 ## Configure your device ##
 
-Almost done! It's finally time to put everything together on your RaspberryPi and set up the connection. If you have your own device, please see ### [Raspberry Setup](raspberrysetup.md) ### for information on how to set up your device.
+Almost done! It's finally time to put everything together on your RaspberryPi and set up the connection. If you have your own device, please see **[Raspberry Setup](raspberrysetup.md)** for information on how to set up your device.
 
 (Full official tutorial for developing your device software can be found [here](https://docs.oracle.com/en/cloud/paas/iot-cloud/iotgs/developing-device-software-using-client-software-libraries1.html "Developing Device Software Using the Client Software Libraries"), or follow this [QuickStart tutorial](http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/iot/IoT%20Quick%20Start%20CPOSIX/IoTQuickStartCPOSIX.html "POSIX Application on a Raspberry Pi").)
 
