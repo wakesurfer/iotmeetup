@@ -1,3 +1,5 @@
+# Part 2: Configure and test the Raspberry #
+
 ## Configure your device ##
 
 Almost done! It's finally time to put everything together on your RaspberryPi and set up the connection. If you have your own device, please see ### [Raspberry Setup](raspberrysetup.md) ### for information on how to set up your device.

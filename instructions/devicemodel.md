@@ -1,3 +1,5 @@
+# Part 1: Configure the Cloud Service #
+
 ## Create a device model ##
 
 Before anything else, you will need to **_define a model_** for your RaspberryPi in the IoT Cloud Service (IoT CS). 
@@ -30,8 +32,9 @@ To sign in to Oracle IoT Cloud Service:
 5. Now it's time for _custom attributes_! If you are using the provided sensors, they will measure **temperature** and **humidity**.
   * Click the Add button ![Add](images/add-button.jpg) in the **Custom Attributes** section.
   * Under **Name**, enter **temperature**, and as **Type**, choose **Number**
-  * Optional. Create the possibility for the device to send alerts by adding **Alerts and Custom Data Messages**
 6. Repeat step 5, but use **humidity** instead of temperature. 
-7. Click **Save** in the upper-right corner. If you've done all steps above, the newly created device model is added to the Device Model table. Please **double check** it's there and that all data entered is correct. 
+
+7. Optional. Create the possibility for the device to send alerts by adding **Alerts and Custom Data Messages**
+8. Click **Save** in the upper-right corner. If you've done all steps above, the newly created device model is added to the Device Model table. Please **double check** it's there and that all data entered is correct. 
 
 ### All done? Time to [create your IoT application](createapplication.md)! ###
