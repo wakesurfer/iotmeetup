@@ -30,6 +30,10 @@ You will:
 
 Part 1 and 2 can be partly **paralellized**, so if you're a team - save time for the challenges and split up the tasks! 
 
+Done with the tutorial or just want to skip to the good stuff? Check out
+### [The challenges](thechallenges.md) ###
+
+For the hackathon-part 
 
 ### Prerequisites ###
 
