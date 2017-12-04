@@ -22,7 +22,7 @@ To communicate with IoT CS in a secure manner, every device that is connected to
 The provisioning file is the shared secret with which it will identify itself to the IoT CS during activation to create trust.
 8. Click **Finish**.
 9. Click Management .
-  * Double check that your RaspberryPi is listed in the Management pane with a State value of Registered and Type value of Unknown.
+  * Double check that your RaspberryPi is listed in the Management pane with a State value of **_Unheard_**.
 
 You have now successfully registered your RaspberryPi as a device in the IoT Cloud Service!
 
