@@ -9,16 +9,16 @@ Almost done! It's finally time to put everything together on your RaspberryPi an
 To make things easier, we have prepared some sample code which you can download directly to the Raspberry using Git.
 
 1. Find the **IP-address** of your RaspberryPi. If you are using one of the provided ones, they are clearly marked with an alias (Ripan, Viggen, Ugglan...), making them earier to identify. We have provided the IP-addresses on papers next to them. Note the IP-adress. If you have your own device, locate one of the screens .
-4. Optional. If you are familiar with Git, it is a good idea to now **create your own repository** with the code and files needed, starting by cloning `https://github.com/DiscoTechOracle/iotmeetup-code`.
-5. Now, **SSH to your device**. If you are on a windows computer, we suggest using Putty. Use the provided credentials for the borrowed RaspberryPis.
+2. Optional. If you are familiar with Git, it is a good idea to now **create your own repository** with the code and files needed, starting by cloning `https://github.com/DiscoTechOracle/iotmeetup-code`.
+3. Now, **SSH to your device**. If you are on a windows computer, we suggest using Putty. Use the provided credentials for the borrowed RaspberryPis.
 4. You now want to copy your downloaded **provisioning file** to the Raspberry, to your home directory (/home/pi). Add it to your repository, or we suggest using FileZilla/sftp/similar. 
-8. To get the sample code: Clone the github repository by entering : `git clone https://github.com/DiscoTechOracle/iotmeetup-code`, replace with your own repository if you have one.
-9. In the `bin` directory, copy the client zip-file from the git-clone and extract it there. 
-10. Open **esensor.c**. At the top you will find variables for the URN, provisioning file and the password. Enter your own according to your notes. **Save**/**Upload new version**.
-11. Compile the c program you created in the previous step.  
+5. To get the sample code: Clone the github repository by entering : `git clone https://github.com/DiscoTechOracle/iotmeetup-code`, replace with your own repository if you have one.
+6. In the `bin` directory, copy the client zip-file from the git-clone and extract it there. 
+7. Open **esensor.c**. At the top you will find variables for the URN, provisioning file and the password. Enter your own according to your notes. **Save**/**Upload new version**.
+8. Compile the c program you created in the previous step.  
    `gcc -g -I../include -I../lib/arm -o ./hello_world_sample.out ./esensor.c -Wl,-Bstatic -L../lib/arm -ldeviceclient -Wl,-Bdynamic -lssl -lcrypto -lm -lrt -lpthread`
-12. Verify that your program was successfully compiled by checking that the directory where your C program resides also contains the file esensor.out
-13. Copy the provisioning file that was downloaded when you registered the device into that directory.
+9. Verify that your program was successfully compiled by checking that the directory where your C program resides also contains the file esensor.out
+10. Copy the provisioning file that was downloaded when you registered the device into that directory.
 
 
 You have now successfully registered your RaspberryPi as a device in the IoT Cloud Service! 
