@@ -24,7 +24,7 @@ To sign in to Oracle IoT Cloud Service:
    ![Add](images/device-model-add.jpg)
    
 4. Enter the values for the **Name**, **Description**, and **URN** text fields. 
-   Name will be the alias for your RaspberryPi in the IoT CS, please mark down with your **team name** and put for example your **team slogan** in the description.
+   Name will be the alias for your RaspberryPi in the IoT CS, please enter your **team name** here and put your **team slogan** in the description.
    
    The URN is special. When your RaspberryPi sends messages, it will use this as a kind of URL. By posting to the URN, the IoT service will know what type of metadata the message will contain. 
    
