@@ -31,7 +31,7 @@ Time to test your improved client. You know the drill by now. To end the test si
 
 2. Now we're rockin'. Lets start the client in the background so it will not be interrupted if our terminal session is disconnected.
 ```
-nohup sh run_iotclient.sh 2>1 log &
+nohup sh run_iotclient.sh 2>&1 log &
 ```
 
 To check that the client is well and alive.
