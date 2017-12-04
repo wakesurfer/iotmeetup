@@ -27,7 +27,7 @@ You will:
 4. Test your client. When you are ready to test against the IoT Server **Part 1** need to be finished
 5. Add some useful features to complete the client
 
-Part 1 and 2 can be partly **paralellized**, so if you're a team - save time for the challenges and split up the tasks! 
+Part 1 and 2 can be partly **parallelized**, so if you're a team - save time for the challenges and split up the tasks! 
 
 ----
 Done with the tutorial or just want to skip to the good stuff? Check out
