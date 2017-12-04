@@ -35,6 +35,7 @@ Done with the tutorial or just want to skip to the good stuff? Check out
 ### The [challenges](thechallenges.md) ###
 
 For the hackathon-part or the meetup!
+
 ----
 
 ### Prerequisites ###
