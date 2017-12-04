@@ -9,8 +9,9 @@ To communicate with IoT CS in a secure manner, every device that is connected to
 1. Open the Management Console. Click the **Menu** (![Menu](images/iot-menu-icon.png)) , click **Devices**.
 2. Click **Registration**.
 3. Click **Register Single Device**.
-4. Complete the optional and mandatory fields.
-  * **Note:** If you leave the Activation Secret field blank, a value is auto-generated and displayed when the device registration is confirmed. You can enter your own Activation Secret value. Any additional information, such as Name, Description, and Metadata are optional, but can be useful as search criteria when managing your registered devices.  
+4. Complete the mandatory and optional fields.
+  * **Mandatory** - Activation ID: Please enter your **TeamName** using simple chars, ending with a number sequence. For example `Lavskrikan-404`
+  * **Note:** Any additional information, such as Name, Description, and Model Number are optional, but can be useful as search criteria when managing your registered devices. If you leave the Activation Secret field blank, a value is auto-generated and displayed when the device registration is confirmed. You can enter your own Activation Secret value. 
   For the sake of this hackathon, enter som unique sequence with special meaning for your team in this field.
 5. Click **Register**.
 6. Specify a password in the File Protection Password and in Confirm Password fields to encrypt the provisioning file that contains the configuration and credentials to activate your device.  
