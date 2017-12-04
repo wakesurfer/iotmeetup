@@ -9,7 +9,7 @@ Almost done! It's finally time to put everything together on your RaspberryPi an
 To make things easier, we have prepared some sample code which you can download directly to the Raspberry using Git.
 
 1. Find the **IP-address** of your RaspberryPi. If you are using one of the provided ones, they are clearly marked with an alias (Ripan, Viggen, Ugglan...), making them earier to identify. We have provided the IP-addresses on papers next to them. Note the IP-adress. If you have your own device, locate one of the screens to connect to your Pi, set up wifi and find the IP.
-2. Optional. If you are familiar with Git, it is a good idea to now **create your own repository** with the code and files needed, starting by cloning `https://github.com/DiscoTechOracle/iotmeetup-code`.
+2. Optional. If you are familiar with Git, it is a good idea to now **create your own repository** with the code and files needed, starting by cloning/forking `https://github.com/DiscoTechOracle/iotmeetup-code`. **Note**: this is a different repository from the tutorial! 
 3. Now, **SSH to your device**. If you are on a windows computer, we suggest using Putty. Use the provided credentials for the borrowed Raspberry.
 4. To get the sample code: Clone the github repository by entering : `git clone https://github.com/DiscoTechOracle/iotmeetup-code.git iotcs`, replace with your own repository if you have one.
 5. Enter the newly created directory iotcs, and navigate to the bin directory.
