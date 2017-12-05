@@ -27,7 +27,7 @@ Now insert the following after the block of code above to close the while loop. 
   sleep(20);
 }
 ```
-Time to test your improved client. You know the drill by now. To end the test simply press ctrl-C.
+Time to **test** your improved client. **You know the drill by now.** To end the test simply press ctrl-C.
 
 2. Now we're rockin'. Lets start the client in the background so it will not be interrupted if our terminal session is disconnected.
 ```
