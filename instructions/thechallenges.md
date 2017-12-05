@@ -1,4 +1,4 @@
-## The Challenges ##
+## The Challenges aka the Hackathon ##
 
 Now on to some interesting challenges. Here we will not guide like in the tutorials. If you complete 3 of these then you will get a permanent place in the IoT Gurus Hall of Fame on our Meetup.com site!
 
