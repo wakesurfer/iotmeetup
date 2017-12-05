@@ -70,6 +70,10 @@ and add the following code.
 ```
 sh /home/pi/iotcs/posix/bin/run_iotclient.sh > /home/pi/iotcs/posix/bin/$(date +%Y\:%m\:%d-%H\:%M\:%S)-run.log 2>&1 &
 ```
+or if you want less clutter in the log then only redirect stderr into it
+```
+sh /home/pi/iotcs/posix/bin/run_iotclient.sh 2> /home/pi/iotcs/posix/bin/$(date +%Y\:%m\:%d-%H\:%M\:%S)-run.log &
+```
 Ok, now reboot the RPi to test. Remember you can check on the process with *ps -ef ...* as you did earlier.
 You can also monitor the messages from your client in the IoT Servers Dashboards.
 
