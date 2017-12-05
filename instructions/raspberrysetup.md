@@ -18,19 +18,12 @@ The basic steps needed:
 
 5. Optional. Setting a Static IP Address for the Raspberry. If you are on your own network and have control over address allocations.
 
-2. Open the [Oracle IoT Cloud Service Client Software Library downloads page](http://www.oracle.com/technetwork/topics/cloud/downloads/iot-client-libraries-2705514.html).
-3. Locate the Binary file for C POSIX Client Software Library and download the zip file to your RaspberryPi's home directory (/home/pi)
-5. Enter the following **command**. If you're asked if you want to continue during the installation, answer Y.  
+6. Open the [Oracle IoT Cloud Service Client Software Library downloads page](http://www.oracle.com/technetwork/topics/cloud/downloads/iot-client-libraries-2705514.html).
+7. Locate the Binary file for C POSIX Client Software Library and download the zip file to your RaspberryPi's home directory (/home/pi)
+8. Enter the following **command**. If you're asked if you want to continue during the installation, answer Y.  
    `sudo apt-get install libssl-dev`  
    ![unzip](images/dwninst_02.png)  
-6. Enter the following **command**:  
-   `export IOTCS_OS_NAME="Raspbian GNU/Linux"`  
-   The variable os_name is a name used to get the activation policy.  
-6. Enter the following **command**:  
-   `export IOTCS_OS_VERSION="8"`
-   The variable os_version is a number used to get the activation policy.  
-6. Navigate back to the home directory (/home/pi).
-7. Use the **unzip command** to extract the content of the iotcs-csl-posix-bin-release.zip file. The files are extracted into the subdirectory iotcs.  
+9. Use the **unzip command** to extract the content of the iotcs-csl-posix-bin-release.zip file. The files are extracted into the subdirectory iotcs.  
    ![unzip](images/dwninst_06.png)  
 
 The tool used for many of these steps is

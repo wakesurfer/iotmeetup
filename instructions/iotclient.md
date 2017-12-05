@@ -115,17 +115,24 @@ sh build_iotclient.sh
 sh run_iotclient.sh
 ```
 
-4. The first important const variable declaration is the type of sensor. The DHT11 and DHT22 need different drivers so it is important to tell which type we are using.
+This should return something similar to this:
+```
+iotcs: iotclient starting!
+iotcs: Device Urn: urn:com:oracle:demo:esensor
+iotcs: Loading configuration from: /home/pi/iotcs/posix/bin/NameOfProvisioningFile.conf
+```
+
+4. Some explanation of the template. The first important const variable declaration is the type of sensor. The DHT11 and DHT22 need different drivers so it is important to tell which type we are using.
 ```
 // Set sensor type DHT11=11, DHT22=22
 const int sensor_type = 22;
 ```
-5. Next we need to **tell on which pin** we have connected the sensor on the GPIO connector.
+5. Next we are telling ** which pin** we have connected the sensor on the GPIO connector.
 ```
 // The sensor is on GPIO pin=4
 const int gpio_pin = 4;
 ```
-6. Next we have a value that we need to set according to our team name. Remember your **URN** from when you first created the device model in the IoT Cloud Service? It is the string "urn:com:oracle:demo:esensor" that needs to be changed into "urn:com:discotechoracle:devices:**TeamName"**. This is the way that the IoT server will recognize which device models that our device supports.
+6. **Time to code**. Next we have a value that we need to set according to our team name. Remember your **URN** from when you first created the device model in the IoT Cloud Service? It is the string "urn:com:oracle:demo:esensor" that needs to be changed into "urn:com:discotechoracle:demo:**TeamName"**. This is the way that the IoT server will recognize which device models that our device supports.
 ```
 int main(int argc, char** argv) {
     /* This is the URN of your device model. */
@@ -135,7 +142,7 @@ int main(int argc, char** argv) {
     };
 ```
 
-7. First we need to Initialize the IoT library. Add this code to iotclient.c where indicated by the comment "Add your code here!"
+7. First we need to Initialize the IoT library. **Add this code** to iotclient.c where indicated by the comment "Add your code here!"
 
 ```
 /*
@@ -149,7 +156,7 @@ if (iotcs_init(ts_path, ts_password) != IOTCS_RESULT_OK) {
 }
 ```
 
-8. Next we need to activate the device if it is not already activated. Add this code to iotclient.c after the previously entered section.
+8. Next we need to activate the device if it is not already activated. **Add this code** to iotclient.c after the previously entered section.
 ```
 /*
  * Activate the device, if it's not already activated.
@@ -165,7 +172,7 @@ if (!iotcs_is_activated()) {
     }
 }
 ```
-9. Get the handles needed to be able to call the IoT library API's. Add this code to iotclient.c after the previously entered section.
+9. Get the handles needed to be able to call the IoT library API's. **Add this code** to iotclient.c after the previously entered section.
 ```
 /* get device model handle */
 if (iotcs_get_device_model_handle(device_urns[0], &device_model_handle) != IOTCS_RESULT_OK) {
@@ -179,7 +186,7 @@ if (iotcs_get_virtual_device_handle(iotcs_get_endpoint_id(), device_model_handle
     return IOTCS_RESULT_FAIL;
 }
 ```
-10. Now lets read some values from the DHT sensor! This API **pi_2_dht_read()** comes from the DHT client library. We have also added some logging to be able to see what is going on at the client side. Add this code to iotclient.c after the previously entered section.
+10. Now lets read some values from the DHT sensor! This API **pi_2_dht_read()** comes from the DHT client library. We have also added some logging to be able to see what is going on at the client side. **Add this code** to iotclient.c after the previously entered section.
 ```
 // Read values from the sensor.
 fprintf(stderr,"iotcs: Reading from the DHT%u sensor!\n", sensor_type);
