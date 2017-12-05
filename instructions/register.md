@@ -20,6 +20,8 @@ To communicate with IoT CS in a secure manner, every device that is connected to
    ![Registration](images/registration_confirmation.png)
 7. Click **Download Provisioning File** to download the provisioning file to your computer.
 The provisioning file is the shared secret with which it will identify itself to the IoT CS during activation to create trust.
+
+  * **NOTE**: Please save as a `.conf` file.
 8. Click **Finish**.
 9. Click Management .
   * Double check that your RaspberryPi is listed in the Management pane with a State value of **_Unheard_**.
