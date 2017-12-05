@@ -106,7 +106,7 @@ You can try and compile the code already to see that everything is in place. We 
 sh build_iotclient.sh
 ```
 
-4. If you haven't already, you now want to **copy** your downloaded **provisioning file** (xyz.conf) to the Raspberry, to the bin directory. Either add it to your repository, or use FileZilla/sftp/similar. 
+4. If you haven't already, you now want to **copy** your downloaded **provisioning file** (xyz.conf) to the Raspberry, to the bin directory. Either add it to your repository, or use FileZilla/sftp/similar.
 
 **Update** the **_run_iotclient.sh_** to use the name of your provisioning file and password.
 
@@ -143,8 +143,6 @@ int main(int argc, char** argv) {
  * Initiate all subsystems like ssl, TAM, request dispatcher,
  * async message dispatcher, etc which needed for correct library work.
  */
-
-sleep (20); // Allow network services to startup
 
 if (iotcs_init(ts_path, ts_password) != IOTCS_RESULT_OK) {
     error("Initialization failed");
