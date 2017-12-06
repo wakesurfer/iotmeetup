@@ -14,7 +14,7 @@ cp iotclient_template.c iotclient.c
 ```
 2. Open the file **iotclient.c** either on the Raspberry or if you choose to pull down the repo to your laptop.
 
-3. Now we will start to add the required API's to the client. First lets look at what we got from the template.
+3. Now we will start to add the required API's to the client. First lets look at what we copied from the template.
 
 ```
 #include <stdio.h>
@@ -100,17 +100,37 @@ int main(int argc, char** argv) {
     return EXIT_SUCCESS;
 }
 ```
-
-You can try and compile the code already to see that everything is in place. We have prepared a shell script you can use. To build run the script as below
+Some explanations of the most important parts in the template!
+The first const variable declaration is the type of sensor used. The DHT11 and DHT22 need different drivers so it is important to tell which type we are using.
+```
+// Set sensor type DHT11=11, DHT22=22
+const int sensor_type = 22;
+```
+Next we are telling **which pin** we have connected the sensor to on the GPIO connector.
+```
+// The sensor is on GPIO pin=4
+const int gpio_pin = 4;
+```
+You can now compile and build the code to see that everything is in place. We have prepared a shell script that you can use. To build run the script as below.
 ```
 sh build_iotclient.sh
 ```
+We still need some configuration before we can do a test run so continue with the next step.
 
-4. If you haven't already, you now want to **copy** your downloaded **provisioning file** (xyz.conf) to the Raspberry, to the bin directory. Either add it to your repository, or use FileZilla/sftp/similar.
+4. If you haven't already, you now want to **copy** your downloaded **provisioning file** (xyz.conf) to the Raspberry, to the bin directory. *Either add it to your git repository and pull the code to the RPi, or use FileZilla/sftp or something similar.*
 
-**Update** the **_run_iotclient.sh_** to use the name of your provisioning file and password.
+**Update** the script **run_iotclient.sh** to use the name of your provisioning file and password.
 
-5. Now run the client.
+5. Next we have a value that we need to set according to our team name. Remember your **URN** from when you first created the device model in the IoT Cloud Service? It is the string *"urn:com:oracle:demo:esensor"* that needs to be changed into "urn:com:discotechoracle:demo:**TeamName"**. This is the way that the IoT server will recognize which device models our device supports.
+```
+int main(int argc, char** argv) {
+    /* This is the URN of your device model. */
+    const char* device_urns[] = {
+        "urn:com:oracle:demo:esensor",
+        NULL
+    };
+```
+6. After updating the run scripts above you can test run the client.
 ```
 sh run_iotclient.sh
 ```
@@ -121,28 +141,13 @@ iotcs: iotclient starting!
 iotcs: Device Urn: urn:com:oracle:demo:esensor
 iotcs: Loading configuration from: /home/pi/iotcs/posix/bin/NameOfProvisioningFile.conf
 ```
+We see a verification that the client is using our **URN** which is important since otherwise the server will not recognize our attributes that we try to send.
+Next we see which **configuration file** the client loaded. It should be the one you previously created in the IoT Server.
+Now lets add some code so the client connects to the server.
 
-4. Some explanation of the template. The first important const variable declaration is the type of sensor. The DHT11 and DHT22 need different drivers so it is important to tell which type we are using.
-```
-// Set sensor type DHT11=11, DHT22=22
-const int sensor_type = 22;
-```
-5. Next we are telling ** which pin** we have connected the sensor on the GPIO connector.
-```
-// The sensor is on GPIO pin=4
-const int gpio_pin = 4;
-```
-6. **Time to code**. Next we have a value that we need to set according to our team name. Remember your **URN** from when you first created the device model in the IoT Cloud Service? It is the string "urn:com:oracle:demo:esensor" that needs to be changed into "urn:com:discotechoracle:demo:**TeamName"**. This is the way that the IoT server will recognize which device models that our device supports.
-```
-int main(int argc, char** argv) {
-    /* This is the URN of your device model. */
-    const char* device_urns[] = {
-        "urn:com:oracle:demo:esensor",
-        NULL
-    };
-```
-
-7. First we need to Initialize the IoT library. **Add this code** to iotclient.c where indicated by the comment "Add your code here!"
+### Coding Time ###
+### You will now add some code snippets to complete the client ###
+7. First we need to Initialize the IoT library. **Add this code** to iotclient.c where indicated by the comment **"Add your code here!"**
 
 ```
 /*
@@ -196,12 +201,12 @@ if (result != DHT_SUCCESS) {
 }
 fprintf(stderr,"iotcs: temperature = %2.2f, humidity= %2.2f\n", temperature, humidity);
 ```
-11. Here is an important API you need to add. It tells IoT that you want to "open an update session" on the client. This means that after this you can add multiple attributes to send and IoT will wait for you to tell it when it is ok to do so. In a couple of rows we will do just that. Add this code to iotclient.c after the previously entered section.
+11. Here is an important API you need to add. It tells IoT that you want to "open an update session" on the client. This means that after this you can add multiple attributes to the **digital twin** and IoT will wait for you to tell it when it is ok to sync it with the server. In a couple of rows we will do just that. **Add this code** to iotclient.c after the previously entered section.
 ```
 // Start setting attribute for IOT
 iotcs_virtual_device_start_update(device_handle);
 ```
-12. Now lets set some attributes that we want to send to the IoT server. This is of course the temperature and humidity values we just read from the sensor. Please note that we are now changing attributes on the **"digital twin"**. The IoT infrastructure will keep the server and the client in sync. There is no need to actually "send" the data. Add this code to iotclient.c after the previously entered section.
+12. Now lets set some attributes that we want to send to the IoT server. This is of course the temperature and humidity values we just read from the sensor. **Add this code** to iotclient.c after the previously entered section.
 ```
 // Set attribute
 rv = iotcs_virtual_device_set_float(device_handle, "temperature", temperature);
@@ -217,12 +222,12 @@ if (rv != IOTCS_RESULT_OK) {
   return IOTCS_RESULT_FAIL;
 }
 ```
-13. Now that the attributes are all set we can close the "update session" and let IoT sync the data to the server.  Add this code to iotclient.c after the previously entered section.
+13. Now that the attributes are all set we can close the "update session" and let IoT sync the data to the server.  **Add this code** to iotclient.c after the previously entered section.
 ```
 // We are done. IOT can sync the virtual device
 iotcs_virtual_device_finish_update(device_handle);
 ```
-14. And finally release the device handles and call the Finalize API. This will close all communication etc.  Add this code to iotclient.c after the previously entered section.
+14. And finally release the device handles and call the Finalize API. This will close all communication etc.  **Add this code** to iotclient.c after the previously entered section.
 ```
 /* free device handle */
 iotcs_free_virtual_device_handle(device_handle);
